@@ -22,7 +22,7 @@ async function getDataByTime() {
         section.append(geo, date, image, personName)
         dataByTime.append(section);
         section.classList.add("memoryContainer");
-        section.style.margin="10px"
+    
         
     }
 };
@@ -53,7 +53,7 @@ async function getDataByPerson(){
             section.append(geo, date, image, personName)
             dataByPerson.append(section);
             section.classList.add("memoryContainer");
-            section.style.margin="10px"
+            
             
         } else if (personNameSelected === "Everyone"){
             console.log("Everyone")
@@ -69,9 +69,8 @@ async function getDataByPerson(){
             const section = document.createElement('div');
             section.append(geo, date, image, personName);
             dataByPerson.append(section);
-            //section.style.backgroundColor="red";
             section.classList.add("memoryContainer");
-            section.style.margin="10px"
+            
         }
     }
 

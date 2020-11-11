@@ -26,7 +26,6 @@ app.get('/seeLogsTime', (request, response) => {
             namesList.push(person)
             console.log(person)
         }
-        
     response.render("memoryLog", {personList : namesList})
     })
 });
