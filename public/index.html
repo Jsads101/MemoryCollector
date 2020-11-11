@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/addons/p5.sound.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+         crossorigin=""/>
+         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+         crossorigin=""></script>
+        <link rel="stylesheet" href="style.css">
+        <title>My Memories App</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 class="logo"><a href="#">Memory Collector</a></h1>
+            <ul class="main-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/seeLogsTime">See Memories</a></li>
+            </ul>
+        </header> 
+        
+        <main>
+        
+            <div class="section">
+                <h2>Create New Memory</h2>
+                <h3> Where Am I? </h3>
+                <form action="/api" method="post">
+                    <p> My latitude: <span id="lat"></span></br>
+                        My longitude: <span id="long"></span>
+                    </p>
+                    <input name="lat" type="hidden" id="hiddenlat" value="">
+                    <input name="long" type="hidden" id="hiddenlong" value="">
+                    <input name="image" type="hidden" id="hiddenImage" value="">
+                    <div id="map"></div>
+                    <h3> What am I Doing?</h3>
+                    <div id="canvas"></div>
+                    <button type="button" id="takepic"> Take Pic</button>
+                    <h3>Who Am I With?</h3>
+                    <label for="personname">Enter persons name:</label>
+                    <input name="personname" type="text"><br><br>
+                    <div class="container">
+                        <button class="large-button" type="submit">Store my Memory!</button>
+                    </div>
+                </form>
+             </div>
+      </main>
+    
+
+    <script src="main.js"> </script>
+
+    </body>
+</html>
